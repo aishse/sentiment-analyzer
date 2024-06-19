@@ -21,7 +21,7 @@ function filterResponses(emotions: TextClassificationOutput) {
     let score = emotion0?.score;
     while (emotions.length > 0) {
         const emotionI = emotions.shift(); 
-        if (emotionI?.score! > score!*0.5) {
+        if (emotionI?.score! > score!*0.45) {
             filtered.push(emotionI);
             score = emotionI?.score!;
         }else {
