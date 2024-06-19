@@ -5,7 +5,7 @@ let hf: HfInference;
 export async function POST(req: Request, res: Response) {
     const {input} = await req.json();
     const inferenceResponse: TextClassificationOutput = await runInference(input);
-
+  
     // filtering data such that if next score is at least half of the previous, that emotion 
     //and subsequent are filtered out
     const filteredResponse = filterResponses([...inferenceResponse])

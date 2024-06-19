@@ -28,6 +28,7 @@ export default function Home() {
       setLoading(true);
       setTagsVisible(false);
       const res = await axios.post("api/emotion", { input })
+      console.log(res);
       setoutput(res.data.filteredResponse)
       setLoading(false);
       setTagsVisible(true); 
